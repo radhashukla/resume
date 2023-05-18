@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    <script>
+        
+        var a=["ram","dhara","eshika","anam"]        
+        document.write(a + "<br><br>");
+
+        a.sort();   //sort by alphabet
+        document.write("After sorting =   "+a + "<br><br>");
+
+        a.reverse();    //variable ki value to palat deta hai
+        document.write("After reverse =   "+a + "<br><br>");
+
+        a.pop();    //highest index ki value to hta deta hai
+        document.write("After poping =   "+a + "<br><br>");
+
+        a.push("tahran");   //add value in last index
+        document.write("After push =   "+a + "<br><br>");
+
+        a.shift();  //array ke starting se value ko htata hai
+        document.write("After shift =   "+a + "<br><br>");
+
+        a.unshift("teja");  //array ke starting me value add karta hai
+        document.write("After unshift =   "+a + "<br><br>");
+        
+        // var b = a.concat("rahil",true); //for adding  arrays
+        b=[10,85.2];
+        c=[null,false]; //** when we want to add null value in array that time array shows space ,not null value
+        d=a.concat(b,c);
+        document.write("After concationation =   "+ d + "<br><br>");
+
+        var e = a.join(" ");    //jab hum array ki sabhi value ko ek value bnana chahte hai
+        var f = a.join("/");
+        document.write("After join =   "+ e + "<br><br>");
+        document.write("After join =   "+ f + "<br><br>");
+
+        var k=["ram","dhara","eshika","anam"]
+        var g = k.slice(1, 3);  //tukdo me toodta hai -(start, end)= end me jo index dete hai usse ek kam value deta hai
+        document.write("slice with start or end point=   "+ g + "<br><br>");
+        var h = k.slice(2); //slice new array create karta hai
+        document.write("slice with one index value =   "+ h + "<br><br>");
+        var i = k.slice(-3);    //-5 -4  -3  -2  -1
+        document.write("slice with negative index =   "+ i + "<br><br>");
+
+        var j = k.splice(1, 1, "kalash");
+        document.write("After splice =   "+ j + "<br><br>");
+        document.write("After splice =   "+ k + "<br><br>");    //array ko modify karta hai
+
+       var l = Array.isArray(k);
+       document.write("After k isArray  =   "+ l + "<br><br>");
+       var m = 10;
+       var n = Array.isArray(m);
+       document.write("After m isArray  =   "+ n + "<br><br>");
+
+       var kk=["ram","dhara","eshika","anam","dhara"]
+       var o = kk.indexOf("dhara"); //0th index se search start karta hai
+       document.write("After indexOf =   "+ o + "<br><br>");
+       var p = kk.indexOf("dhara",2); // value or kaha se search karna hai index value diya hai
+       document.write("After indexOf =   "+ p + "<br><br>");
+       var q = kk.indexOf("rehana",2);  //indexOf jab same value nahi milti hai -1 return karta hai
+       document.write("After indexOf =   "+ q + "<br><br>");
+
+       var r = kk.lastIndexOf("rehana",2);  //lastIndexOf jab same value nahi milti hai -1 return karta hai
+       document.write("After lastIndexOf =  "+ r + "<br><br>");
+       var s = kk.indexOf("dhara",2);  // last index se value search karna start karta hai
+       document.write("After lastIndexOf =  "+ s + "<br><br>");
+
+       var t = kk.includes("neha");
+       document.write("After includes =   "+ t + "<br><br>");
+       var u = kk.includes("anam"); //case senstive hota hai
+       document.write("After includes =   "+ u + "<br><br>");
+
+       var aa = [10,13,15,108];
+       document.write("array for some method : "+ aa + "<br><br>");
+       var bb = aa.some(checkAdult);    //agr array ki ek value bhi condistion ko pass karti hai to some method ke karan true retuen karta hai
+       document.write("some method : " + bb + "<br><br>");
+       function checkAdult(age){
+        return age >= 18;
+       }
+
+       var cc = [100,20,35,108];
+       document.write( "array for every method : "+cc + "<br><br>");
+       var dd = cc.every(Adult);    //agr array ki sabhi value condistion ko pass karti hai to every method true retuen karta hai
+       document.write("every method : " + dd + "<br><br>");
+       function Adult(age){
+       return age >= 18;
+       }
+
+       var ee = [10,13,15,108];
+       document.write( "array for find method : "+ ee + "<br><br>");
+       var ff = ee.find(checkAdult);    // array ki jo bhi first value condition ko pass karti hai to find method ke karan condition ko follow karne baali value retuen milti hai
+       document.write("find method : " + ff + "<br><br>");
+       function checkAdult(age){
+       return age >= 18;
+       }
+
+       var gg = [10,13,15,108];
+       document.write( "array for findIndex method : "+ gg + "<br><br>");
+       var hh = gg.findIndex(checkAdult);    //jo value condition ko pass karti hai findIndex method ke karan us value ki index value retuen milti hai
+       document.write("findIndex method : " + hh + "<br><br>");
+       function checkAdult(age){
+       return age >= 18;
+       }
+
+       var ii = [10,88,15,108];
+       document.write( "array for filter method : "+ ii + "<br><br>");
+       var jj = ii.filter(checkAdultt);    // array ki jo value bhi condistion ko pass karti hai, filter method us value ko retuen karta hai
+       document.write("find method : " + jj + "<br><br>");
+       function checkAdultt(age){
+       return age >= 18;
+       }
+
+       var ll = ii.toString();  //array convert into string by toString method
+       document.write(ll +"  and the type of : "+ typeof(ll),"<br><br>");
+
+       //** valueOf print array value its same as document.write method
+       
+       //** The fill() method fills all the elements in an array with a static value
+       var mm = [10,88,15,108];
+       mm.fill("kalia");
+       document.write("By fill method : "+ mm +"<br><br>");
+
+       document.write("<br>"+"By forEach loop  "+"<br>" );
+       var nn = [10,88,15,108];
+       nn.forEach(function(value, index){
+       document.write("<br>"+"By forEach loop with index value : "+ index + ":" + value); 
+       })
+
+       nn.forEach(loop);    //2nd way of using forEach loop
+        function loop(value, index){
+       document.write("<br>"+ index + ":" + value); 
+       }
+       
+       
+    </script>
+</body>
+</html>
