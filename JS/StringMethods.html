@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let str="welcome to google! this is my google world!";
+        document.write("<h1>",str,"</h1>");
+
+        let mystr=str.replace(/google/g, "Cybrom"); //when we add g, method work as globally and replace all the maches positions with new word
+        document.write("replace method : "+"<h1>", mystr, "</h1>");
+        
+
+        //uppercase
+        let mystr1=str.toUpperCase();
+        document.write("toUpperCase() method : "+"<h1>", mystr1, "</h1>");
+
+        //lowercase
+        let mystr2=str.toLowerCase();
+        document.write("toLowerCase() method : "+"<h1>", mystr2, "</h1>");
+
+
+        //charAt()--- with the help of index return character  
+        let str1="Cybrom";
+        let str2=str1.charAt(0);
+        document.write("charAt() method : "+"<h1>", str2, "</h1>");
+
+        //charCodeAt()-- by index value its return character
+        let str3="Cybrom";
+        let str4=str3.charCodeAt(0);
+        document.write("charCodeAt() method : "+"<h1>", str4, "</h1>");
+
+        //charCodeAt()---  ASCII character/number/symbol
+        let str44=String.fromCharCode(65);
+        document.write(" fromcharcode() method : "+"<h1>", str44, "</h1>");
+
+        //charAt()--- It is read only str[0]="A" gives no error
+        let str5="Cybrom";
+        let str6=str[1];
+        let str7=str[4];
+        document.write("<h1>", str6, str7, "</h1>");
+
+
+        //string converted to array with the split() method.
+        let str8="Welcome to Cybr om Bhopal";
+        document.write("<h1>", typeof(str8), str8, "</h1>");
+        let str9=str8.split(" ");
+        document.write("<h1>", typeof(str9), str9,"</h1>");
+
+        let str10="Welcome, t, o, Cybr, om Bhopal, we are, Software, Developer";
+        document.write("<h1>", typeof(str10), str10, "</h1>");
+        let str11=str10.split(",");
+        document.write("split() method : "+"<h1>", typeof(str11), str11,"</h1>");
+
+        //indexof() method
+        let str12="welcome to my country India!";
+        let ans=str12.indexOf("India");
+        document.write("indexOf() method : "+"<h1>", ans, "</h1>");
+
+        //lastIndexOf()
+        let str13="welcome to my country India India India!";
+        let ans1=str13.lastIndexOf("India");
+        document.write("lastIndexOf() method : "+"<h1>", ans1, "</h1>");
+
+         //startsWith()--- return true or false
+         let str14="welcome to my country India India India!";
+        let ans2=str14.startsWith("India");
+        document.write("startsWith() method : "+"<h1>", ans2, "</h1>");
+
+         //endsWith()--- return true or false
+         let str15="welcome to my country India India India!";
+        let ans3=str15.endsWith("India");
+        document.write("endsWith() method : "+"<h1>", ans3, "</h1>");
+
+        //search/locate()--- return true or false-- search method check value is in string or not and return value index 
+        let str16="welcome to my country India India India!";
+        let ans4=str16.search("India");
+        document.write("Search() method : "+"<h1>", ans4, "</h1>");
+        
+        // match()--- return new array if value find it with finded value  
+        let str17="welcome to my country India India India!";
+        let ans5=str17.match(/India/g);
+        document.write("match() method : "+"<h1>", ans5, "</h1>");
+
+        // trim()--- remove all extra spaces from word
+        let str18="   welcome   ";
+        let ans6=str18.trim();
+        document.write("Trim() method : "+"<h1>", ans6, "</h1>");
+
+        let ans19 = str17.split("n");  //by split method we break string acoording to are condition
+        document.write("split() method : "+"<h1>", ans19, "</h1>");
+
+        let ans20 = str17.repeat(3);  //by repeat method we repeat string many times
+        document.write("Repeat() method : "+"<h1>", ans20, "</h1>");
+
+        let ans21 = str17.slice(2, 10);  //by slice method we get value according to are given range
+        document.write("Slice() method : "+"<h1>", ans21, "</h1>");
+        let ans22 = str17.slice(-3);  //by slice method we get value according to are given range---(from last index)
+        document.write("Slice() method : "+"<h1>", ans22, "</h1>");
+
+        let ans23 = str17.substr(2, 10);  //(index, counting of value)
+        document.write("substr() method : "+"<h1>", ans23, "</h1>");
+
+        let ans24 = str17.substring(2, 10);  //by substring method we get value according to are given range-1
+        document.write("substring() method : "+"<h1>", ans24, "</h1>");
+
+        let str19 = [5,9,7,5];
+        let ans25 = str19.toString();  //by slice method we get value according to are given range
+        document.write("tostring() method : "+"<h1>", ans25, "</h1>");
+
+        let ans26 = str17.valueOf();  //by slice method we get value according to are given range
+        document.write("valueOf() method : "+"<h1>", ans26, "</h1>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
