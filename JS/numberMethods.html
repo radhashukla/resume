@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Methods</title>
+</head>
+<body>
+    <script>
+        var a = "5";
+        document.write("Value of a : "+ a +"<br>"+" type of a : "+ typeof(a),"<br>");
+        document.write("when a is string --- a*10 = "+a*10,"<br>");
+        var b = Number(a);
+        document.write("when a is converted, string to number --- a*10 = "+ a*10 + "<br>");
+
+        var c = true;   //identified boolean value and return 1 for true or 0 for false
+        var cc = Number(c);
+        document.write("when a is converted, string to number = "+cc ,"<br>");
+
+        var d = "22 55";   // identified value of d is not a number
+        var dd = Number(d);
+        document.write("when a is converted, string to number = "+ dd,"<br>");
+//==============================================================
+
+        var e = parseInt(d);    // return integer value without space or decimal
+        document.write("parseInt method = "+ e,"<br>");
+        var ee = "22 years";   // only first number 22
+        var eee = Number(ee);
+        document.write("parseInt method  = "+ eee ,"<br>");
+        var d = "055 ";   // identified value of d and return 55
+        var dd = Number(d);
+        document.write("parseInt method  = "+ dd,"<br>");
+        var f = "six month ";   // identified value of f and return NAN
+        var ff = Number(f);
+        document.write("parseInt method  = "+ ff,"<br><br>");
+//=============================================================
+
+        var g = "10.80 celcius ";   // identified value of d and return 10.8
+        var gg = parseFloat(g);
+        document.write("parseFloat method  = "+ gg,"<br>");
+//==============================================================
+
+        // var h = true;
+        var h = 100;
+        // var h = "-5.22";
+        // var h = "hello";
+        // var h = Infinity;
+        var hh = Number.isFinite(h);
+        document.write("isFinite method : "+ hh, "<br>" );
+//============================================================ 
+
+        // var i = true;
+        // var i = 100;
+        // var i = -50.2;
+        var i = 10.50-5;
+        // var i = -50;
+        // var i = "hello";
+        // var i = Infinity;
+        var ii = Number.isInteger(i);
+        document.write("isInteger method : "+ ii +"<br>" );
+//============================================================
+
+        var j = 10.58794;
+        var jj = j.toFixed(3);
+        document.write("toFixed method : "+ jj +"<br>" );
+//============================================================
+
+        var kk = j.toPrecision(10);
+        document.write("toPrecision method : "+ kk +"<br>" );
+//============================================================
+
+    </script>
+</body>
+</html>
